@@ -22,11 +22,12 @@
       <section>
         <h2>Recent posts</h2>   
         <div>
-          {% for entry in entries  %}
+          {% for entry in entries  %}    
           <div>
           <div class="entry" >
-             <h4 class="entry_content">  {{entry[0] | truncate(30, true)}}. <small>{{entry[1]}}</small> </h4> 
-             <time class="entry_date"> </time>
+             <h4 class="entry_content">  {{entry[0] | truncate(30, true)}}.
+              <time class="entry_date" datetime="entry[1]"> <small>{{entry[2]}}</small> </time>
+             </h4>    
           </div>
              <p class="entry_content">  {{entry[0]}} </p>       
           {% endfor %}
