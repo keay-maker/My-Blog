@@ -15,10 +15,10 @@ def home():
             entry_content = request.form.get("content")
             formatted_date = datetime.datetime.today().strftime("%d-%m-%y")
             entries.append((entry_content, formatted_date))
-            app.db.entries.insert({
+            app.db.entries.insert_one({
                 "content": entry_content,
                 "date": formatted_date
-            })
+                })
         entries_with_date = [
             (
                  entry[0],
