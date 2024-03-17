@@ -1,1 +1,1 @@
-A single-page Blog Page
+A single-page Blog Page connected to a database.
