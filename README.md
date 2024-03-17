@@ -1,1 +1,1 @@
-A single Blog Page
+A single-page Blog Page
