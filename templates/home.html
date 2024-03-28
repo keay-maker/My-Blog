@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h2>My Blog</h2>
+    </div>
+      New blog entry form 
+     <div class="article">
+      <h2>Add New Entry</h2>
+      <form  method="post">
+          <label for="content">:</label>
+          <textarea id="content" name="content" rows="4" required></textarea>
+          <input type="submit" value="add entry">
+      </form>
+
+      <section>
+        <h2>Recent posts</h2>   
+        <div>
+          {% for entry in entries %}    
+          <div>
+          <div class="entry" >
+             <h4 class="entry_content">  {{entry[0] }}.
+              <time class="entry_date" datetime="entry[1]"> <small>{{entry[2]}}</small></time>
+             </h4>    
+          </div>
+             <p class="entry_content">  {{entry[0]}} </p>       
+          {% endfor %}
+        </div>
+      </section>   
+</body>
+</html>
